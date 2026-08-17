@@ -1,0 +1,208 @@
+/* ========================================
+   MENU BUTTON
+======================================== */
+
+.menu-button {
+    position: fixed;
+    left: 50%;
+    bottom: 32px;
+
+    transform: translateX(-50%);
+
+    z-index: 200;
+
+    height: 64px;
+
+    padding-left: 30px;
+    padding-right: 6px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border: none;
+    border-radius: 9999px;
+
+    background: #f4f0e8;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.45s ease;
+}
+
+.menu-button:hover {
+    transform: translateX(-50%) scale(1.03);
+}
+
+.menu-button:active {
+    transform: translateX(-50%) scale(0.97);
+}
+
+
+/* ========================================
+   TEXT
+======================================== */
+
+.menu-button-text {
+    position: relative;
+
+    width: 72px;
+    min-width: 72px;
+    height: 20px;
+
+    display: block;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    color: #292725;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    letter-spacing: -0.02em;
+}
+
+.menu-button-label {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+
+    display: block;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    line-height: 20px;
+}
+
+.menu-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.close-text {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+/* ========================================
+   CIRCLE
+======================================== */
+
+.menu-button-circle {
+    position: relative;
+
+    width: 56px;
+    height: 56px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9999px;
+
+    background: #292725;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   ICONS
+======================================== */
+
+.menu-icon,
+.close-icon {
+    position: absolute;
+
+    color: #b7ada0;
+
+    font-size: 23px;
+
+    pointer-events: none;
+}
+
+.menu-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.close-icon {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+}
+
+
+/* ========================================
+   MARQUEE
+======================================== */
+
+@keyframes menu-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.menu-marquee-track {
+    display: flex;
+
+    width: max-content;
+
+    white-space: nowrap;
+
+    will-change: transform;
+
+    animation: menu-marquee 25s linear infinite;
+}
+
+.menu-marquee-track span {
+    display: block;
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    .menu-button {
+        bottom: 20px;
+        height: 60px;
+
+        padding-left: 24px;
+        padding-right: 5px;
+
+        gap: 8px;
+    }
+
+    .menu-button-circle {
+        width: 52px;
+        height: 52px;
+    }
+
+    .menu-button-text {
+        width: 72px;
+        min-width: 72px;
+        font-size: 14px;
+    }
+}
