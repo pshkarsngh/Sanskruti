@@ -72,7 +72,7 @@ const socials = [
 ];
 
 const marqueeGroup =
-    "Capsule    Capsule    Capsule    Capsule    ";
+    "Sanskruti Design Studio    ";
 
 const MenuOverlay = ({
     buttonRef,
