@@ -103,10 +103,29 @@ const Activities = () => {
                         <p className="text-[.7rem] text-[#6a6155] text-nowrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit:</p>
                     </div>
                     <div className="flex flex-col justify-start items-start gap-5 mt-8">
-                    
+                        <div className="w-full">
+                            <div className="flex justify-between w-full mb-4">
+                                <h1 className="text-[#6f6353] text-xl">Easy</h1>
+                                <p className="text-[#6f6353] text-[0.7rem]">3-5h duration</p>
+                            </div>
+                            <div className="relative z-9 w-full h-[0.1rem] bg-[#d9cfbd]">
+                                <div className="progress-line absolute z-10 bg-[#181717] w-[40%] h-[0.1rem] top-1/2 -translate-y-1/2 left-0"></div>
+                            </div>
                         </div>
                         <div className="w-full">
-                            
+                            <div className="flex justify-between w-full mb-4">
+                                <h1 className="text-[#6f6353] text-xl">Medium</h1>
+                                <p className="text-[#6f6353] text-[0.7rem]">8-12h duration</p>
+                            </div>
+                            <div className="relative z-9 w-full h-[0.1rem] bg-[#d9cfbd]">
+                                <div className="progress-line absolute z-10 bg-[#181717] w-[80%] h-[0.1rem] top-1/2 -translate-y-1/2 left-0"></div>
+                            </div>
+                        </div>
+                        <div className="w-full">
+                            <div className="flex justify-between w-full mb-4">
+                                <h1 className="text-[#6f6353] text-xl">Hard</h1>
+                                <p className="text-[#6f6353] text-[0.7rem]">24h duration</p>
+                            </div>
                             <div className="relative z-9 w-full h-[0.1rem] bg-[#d9cfbd]">
                                 <div className="progress-line absolute z-10 bg-[#181717] w-[60%] h-[0.1rem] top-1/2 -translate-y-1/2 left-0"></div>
                             </div>
@@ -117,7 +136,7 @@ const Activities = () => {
                     <p>We want to make sure your stay is exciting and enjoyable. That’s why we offer a variety of activities with different levels of engagement. Whether you seek
                         thrills or tranquility, there’s something for everyone to make your desert stay truly memorable.</p>
                 </div>
-        
+            </div>
         </section>
     );
 };
